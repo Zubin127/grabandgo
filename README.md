@@ -3,10 +3,11 @@
 1st is admin section
 2nd is database
 Technology used: 
-XAMPP,
+HTML
 PHP,
 mysql,
 bootstrap,
 css3 
 Javascript
 JQuery
+XAMPP,
