@@ -1,12 +1,8 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-  <meta charset="utf-8">
-    <title>Submit Add for free</title>
+    <meta charset="utf-8">
+    <title>Twitter Bootstrap shopping cart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -27,7 +23,7 @@ session_start();
 	<!-- Favicons -->
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
   </head>
-<body  style='background:url(assets/img/abcde.jpg)'>
+<body>
 <!-- 
 	Upper Header Section 
 -->
@@ -41,9 +37,11 @@ session_start();
 					<a href="#"><span class="icon-youtube"></span></a>
 					<a href="#"><span class="icon-tumblr"></span></a>
 				</div>
-				<a class="active" href="index.php"> <span class="icon-home"></span> Home</a> 
-				<a href="aboutus.php"><span class="icon-edit"></span> About Us </a> 
-				<a href="contact.php"><span class="icon-envelope"></span> Contact us</a>
+				<a class="active" href="index.html"> <span class="icon-home"></span> Home</a> 
+				<a href="#"><span class="icon-user"></span> My Account</a> 
+				<a href="register.html"><span class="icon-edit"></span> Free Register </a> 
+				<a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
+				<a href="cart.html"><span class="icon-shopping-cart"></span> 2 Item(s) - <span class="badge badge-warning"> $448.42</span></a>
 			</div>
 		</div>
 	</div>
@@ -52,13 +50,13 @@ session_start();
 <!--
 Lower Header Section 
 -->
-<div class="container"  style='width:1200px;'>
+<div class="container">
 <div id="gototop"> </div>
 <header id="header">
 <div class="row">
 	<div class="span4">
 	<h1>
-	<a class="logo" href="registration.php"><span>Submit Addvertisment For Free</span> 
+	<a class="logo" href="index.html"><span>Twitter Bootstrap ecommerce template</span> 
 		<img src="assets/img/logo-bootstrap-shoping-cart.png" alt="bootstrap sexy shop">
 	</a>
 	</h1>
@@ -67,13 +65,13 @@ Lower Header Section
 	<div class="offerNoteWrapper">
 	<h1 class="dotmark">
 	<i class="icon-cut"></i>
-	<a href='registration.php'>Submit Addvertisment For Free</a>
+	Submit Addvertisment For Free
 	</h1>
 	</div>
 	</div>
 	<div class="span4 alignR">
-	<p><br> <strong> Support (24/7) :  (+91)99 8283	2466 </strong><br><br></p>
-	<span class="btn btn-mini"><span class="icon-shopping-cart"></span></span>
+	<p><br> <strong> Support (24/7) : +9199	8283 2466 </strong><br><br></p>
+	<span class="btn btn-mini">[ 2 ] <span class="icon-shopping-cart"></span></span>
 	<span class="btn btn-warning btn-mini">$</span>
 	<span class="btn btn-mini">&pound;</span>
 	<span class="btn btn-mini">&euro;</span>
@@ -94,26 +92,33 @@ Navigation Bar Section
 		  </a>
 		  <div class="nav-collapse">
 			<ul class="nav">
-			  <li class="active"><a href="index.php">Home	</a></li>
-	
-			  <li class=""><a href="category_view.php">View Advertisement</a></li>
-			  <li class=""><a href="inbox.php">Inbox</a></li>
-			  <li class=""><a href="signup.php">Signup</a></li>
-			  <li class=""><a href="contactus.php">Contact Us</a></li>
+			  <li class="active"><a href="index.html">Home	</a></li>
+			  <li class=""><a href="add_category.php">Add Category</a></li>
+			  <li class=""><a href="sub.php">Add SubCategory</a></li>
+			  <li class=""><a href="view_category.php">View Category</a></li>
+			  <li class=""><a href="view_sub_category.php">View SubCategory</a></li>
+			  <li class=""><a href="general.html">General Content</a></li>
 			</ul>
 			
 			<ul class="nav pull-right">
 			<li class="dropdown">
-			
-				<?php
-				
-					if(isset($_SESSION["idd"]))
-				echo '<a href="logout.php"><span class="icon-lock"></span> Logout <b class="caret"></b></a>';
-				else
-				echo '<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>';
-				
-				?>
-			
+				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
+				<div class="dropdown-menu">
+				<form class="form-horizontal loginFrm">
+				  <div class="control-group">
+					<input type="text" class="span2" id="inputEmail" placeholder="Email">
+				  </div>
+				  <div class="control-group">
+					<input type="password" class="span2" id="inputPassword" placeholder="Password">
+				  </div>
+				  <div class="control-group">
+					<label class="checkbox">
+					<input type="checkbox"> Remember me
+					</label>
+					<button type="submit" class="shopBtn btn-block">Sign in</button>
+				  </div>
+				</form>
+				</div>
 			</li>
 			</ul>
 		  </div>
@@ -127,24 +132,18 @@ Body Section
 <div id="sidebar" class="span3">
 <div class="well well-small">
 	<ul class="nav nav-list">
-	<?php
-	
-		include('admin/comman.php');
-		$r=mysql_query("select * from adminc");
-		while($rows=mysql_fetch_array($r))
-		{
-	?>
-
-	<li><a href="view_sub.php?a=<?php echo $rows[1]; ?>">
-	<span class="icon-chevron-right"></span><?php  echo  $rows[1];  ?></a></li>
-	
-	<?php
-	}
-	
-	?>
-
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Watches</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Fine Jewelry</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Fashion Jewelry</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Engagement & Wedding</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Men's Jewelry</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Vintage & Antique</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Diamonds </a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Beads</a></li>
+		<li><a href="products.html"><span class="icon-chevron-right"></span>See All Jewelry & Watches</a></li>
 		<li style="border:0"> &nbsp;</li>
-		<li> <a class="totalInCart" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;"></span></strong></a></li>
+		<li> <a class="totalInCart" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$448.42</span></strong></a></li>
 	</ul>
 </div>
 
@@ -163,9 +162,9 @@ Body Section
 			<li>
 			  <div class="thumbnail">
 				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<img src="admin/category_photo/petslogo.jpg" alt="bootstrap ecommerce templates">
+				<img src="assets/img/bootstrap-ecommerce-templates.png" alt="bootstrap ecommerce templates">
 				<div class="caption">
-				  <h4><span class="pull-center"><img src="assets/img/rs.png">1.00</span></h4>
+				  <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
 				</div>
 			  </div>
 			</li>
@@ -173,27 +172,26 @@ Body Section
 			<li>
 			  <div class="thumbnail">
 				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<img src="images/iphone6.jpg" alt="shopping cart">
+				<img src="assets/img/shopping-cart-template.png" alt="shopping cart template">
 				<div class="caption">
-				  <h4><span class="pull-center"><img src="assets/img/rs.png">10.00</span></h4>
+				  <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
 				</div>
 			  </div>
 			</li>
 			<li style="border:0"> &nbsp;</li>
 			<li>
 			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span></a>
-				<img src="images/santro.jpg" alt="bootstrap template">
+				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+				<img src="assets/img/bootstrap-template.png" alt="bootstrap template">
 				<div class="caption">
-				  <h4>
-				  <span class="pull-center"><img src="assets/img/rs.png">22.00</span></h4>
+				  <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
 				</div>
 			  </div>
 			</li>
 		  </ul>
 
 	</div>
-	<div class="span9" style='width:930px'>
+	<div class="span9">
 	<div class="well np">
 		<div id="myCarousel" class="carousel slide homCar">
             <div class="carousel-inner">

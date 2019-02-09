@@ -1,19 +1,43 @@
 </div>
 	</div>
 	
-	
+	<div class="well well-small">
+	<a class="btn btn-mini pull-right" href="#">View more <span class="icon-plus"></span></a>
+	Popular Products 
+	</div>
+	<hr>
+	<div class="well well-small">
+	<a class="btn btn-mini pull-right" href="#">View more <span class="icon-plus"></span></a>
+	Best selling Products 
+	</div>
 	</div>
 	</div>
 <!-- 
 Clients 
 -->
 <section class="our_client">
-	
-	
+	<hr class="soften"/>
+	<h4 class="title cntr"><span class="text">Manufactures</span></h4>
+	<hr class="soften"/>
 	<div class="row">
-		
-			<a href="#"><img alt="" src="assets/img/fs.jpg"  style="width:100%;height:300px"></a>
-		
+		<div class="span2">
+			<a href="#"><img alt="" src="assets/img/1.png"></a>
+		</div>
+		<div class="span2">
+			<a href="#"><img alt="" src="assets/img/2.png"></a>
+		</div>
+		<div class="span2">
+			<a href="#"><img alt="" src="assets/img/3.png"></a>
+		</div>
+		<div class="span2">
+			<a href="#"><img alt="" src="assets/img/4.png"></a>
+		</div>
+		<div class="span2">
+			<a href="#"><img alt="" src="assets/img/5.png"></a>
+		</div>
+		<div class="span2">
+			<a href="#"><img alt="" src="assets/img/6.png"></a>
+		</div>
 	</div>
 </section>
 
@@ -52,13 +76,6 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
  those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et 
  Malorum" by Cicero are also reproduced in their exact original form, 
 accompanied by English versions from the 1914 translation by H. Rackham.
-	<p>
-		<a href="#"><img src="assets/img/maestro.png" alt="payment"></a>
-		&nbsp;&nbsp;&nbsp;<a href="#"><img src="assets/img/mc.png" alt="payment"></a>
-		&nbsp;&nbsp;&nbsp;<a href="#"><img src="assets/img/pp.png" alt="payment"></a>
-		&nbsp;&nbsp;&nbsp;<a href="#"><img src="assets/img/visa.png" alt="payment"></a>
-		&nbsp;&nbsp;&nbsp;<a href="#"><img src="assets/img/disc.png" alt="payment"></a>
-	</p>
  </div>
  </div>
 </footer>
@@ -67,9 +84,15 @@ accompanied by English versions from the 1914 translation by H. Rackham.
 <div class="copyright">
 <div class="container">
 	<p class="pull-right">
-	<span align="center"><br><h3> Designed And Developed By Zubin Mukherjee </span></h3></div>
-	
-	</div>
+		<a href="#"><img src="assets/img/maestro.png" alt="payment"></a>
+		<a href="#"><img src="assets/img/mc.png" alt="payment"></a>
+		<a href="#"><img src="assets/img/pp.png" alt="payment"></a>
+		<a href="#"><img src="assets/img/visa.png" alt="payment"></a>
+		<a href="#"><img src="assets/img/disc.png" alt="payment"></a>
+	</p>
+	<span>Copyright &copy; 2013<br> bootstrap ecommerce shopping template</span>
+</div>
+</div>
 <a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
